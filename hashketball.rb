@@ -127,13 +127,10 @@ def game_hash
 end
 
 # Write code here
-def num_points_scored(player, game_hash)
-  player.capitalize!
-  if game_hash[:home][:players].include?(player)
-   game_hash[:home][:players][player][:stats][:points]
-  elsif game_hash[:away][:players].include?(player)
-   game_hash[:away][:players][player][:stats][:points]
-  else
-   "No player found."
+def num_points_scored(player_n)
+  game_hash.each do |home_away, keys|
+    keys[:players].each do |player|
+      return player[:points] if player[:player_name] == player_n
+    end
   end
 end
