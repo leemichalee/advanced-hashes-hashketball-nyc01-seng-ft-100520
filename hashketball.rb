@@ -129,8 +129,8 @@ end
 # Write code here
 def num_points_scored(player, game_hash)
   player.capitalize!
-  if hashketball[:home][:players].include?(player)
-   hashketball[:home][:players][player][:stats][:points]
+  if game_hash[:home][:players].include?(player)
+   hame_hash[:home][:players][player][:stats][:points]
   elsif hashketball[:away][:players].include?(player)
    hashketball[:away][:players][player][:stats][:points]
   else
