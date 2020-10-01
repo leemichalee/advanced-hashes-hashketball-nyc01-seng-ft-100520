@@ -127,7 +127,7 @@ def game_hash
 end
 
 # Write code here
-def num_points_scored(player, hashketball)
+def num_points_scored(player, game_hash)
   player.capitalize!
   if hashketball[:home][:players].include?(player)
    hashketball[:home][:players][player][:stats][:points]
